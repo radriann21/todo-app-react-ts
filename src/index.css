@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Regular";
+  src: local("Josefin-Sans"), url("./assets/fonts/JosefinSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Semibold";
+  src: local("Josefin Sans"), url("./assets/fonts/JosefinSans-SemiBold.ttf") format("truetype");
+}
