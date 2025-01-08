@@ -5,7 +5,8 @@ type Task = {
 }
 
 type State = {
-  tasks: Task[] | undefined
+  tasks: Task[] | undefined,
+  filter: string
 }
 
 type Actions = {
@@ -13,6 +14,7 @@ type Actions = {
   deleteTask: (taskId: string) => void,
   setCompleted: (taskId: string, completed: boolean) => void,
   clearCompletedTasks: () => void,
+  setFilter: (filter: string) => void
 }
 
 type TasksListProps = {

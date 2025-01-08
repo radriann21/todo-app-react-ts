@@ -1,8 +1,8 @@
 import { create } from "zustand";
 
-
 export const TodoStore = create<State & Actions>((set) => ({
   tasks: JSON.parse(localStorage.getItem('tasks') || '[]') || [],
+  filter: 'all',
   createNewTask: (task) => set((state) => {
     const updateTasks = [...(state.tasks || []), task];
     localStorage.setItem('tasks', JSON.stringify(updateTasks));
@@ -27,5 +27,6 @@ export const TodoStore = create<State & Actions>((set) => ({
     const filteredTasks = state.tasks?.filter(task => task.completed !== true)
     localStorage.setItem('tasks', JSON.stringify(filteredTasks));
     return { tasks: filteredTasks }
-  })
+  }),
+  setFilter: (filter: string) => set((state) => ({ ...state, filter }))
 }));
