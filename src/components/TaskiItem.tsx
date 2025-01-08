@@ -4,13 +4,23 @@ import { Close } from "./icons/Close"
 
 export const TaskItem = ({ task }: TaskItemProps) => {
   const deleteTask = useStore(TodoStore, (state) => state.deleteTask)
+  const setCompleted = useStore(TodoStore, (state) => state.setCompleted)
+
+  const handleToggleCompleted = () => {
+    setCompleted(task.id, !task.completed);
+  };
+
+  const handleDeleteTask = () => {
+    deleteTask(task.id)
+  }
+
   return (
     <li className="py-4 px-4 text-left w-full text-light-very-dark-grayish-blue flex items-center justify-between cursor-pointer border-b-2">
       <div className="flex items-center space-x-8">
-
-        {task.name}
+        <input onClick={handleToggleCompleted} type="checkbox" checked={task.completed} />
+        <span className={`${task.completed === false ? null : 'line-through text-light-light-grayish-blue'}`}>{task.name}</span>
       </div>
-      <button onClick={() => deleteTask(task.id)}>
+      <button onClick={handleDeleteTask}>
         <Close />
       </button>
     </li>

@@ -10,9 +10,9 @@ type State = {
 
 type Actions = {
   createNewTask: (task: Task) => void,
-  updateTask: (task: Task) => void,
   deleteTask: (taskId: string) => void,
-  setCompleted: (taskId: string) => void
+  setCompleted: (taskId: string, completed: boolean) => void,
+  clearCompletedTasks: () => void,
 }
 
 type TasksListProps = {

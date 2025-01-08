@@ -4,6 +4,7 @@ import { TasksList } from "./TasksList";
 
 export const TasksListContainer = () => {
   const tasks = useStore(TodoStore, (state) => state.tasks);
+  const clearCompletedTasks = useStore(TodoStore, (state) => state.clearCompletedTasks);
 
   const options: string[] = [
     'All',
@@ -32,7 +33,7 @@ export const TasksListContainer = () => {
               </span>
             ))}
           </div>
-          <button className="text-light-dark-grayish-blue text-sm cursor-pointer transition-colors duration-300 hover:text-light-very-dark-grayish-blue">Clear completed</button>
+          <button onClick={clearCompletedTasks} className="text-light-dark-grayish-blue text-sm cursor-pointer transition-colors duration-300 hover:text-light-very-dark-grayish-blue">Clear completed</button>
         </section>
       </section>
     </>
