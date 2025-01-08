@@ -30,6 +30,10 @@ export default {
       fontFamily: {
         'primaryRegular': ['Regular'],
         'primarySemibold': ['Semibold']
+      },
+      backgroundImage: {
+        'hero-pattern-desktop-light': 'url("./assets/images/bg-desktop-light.jpg")',
+        'hero-pattern-mobile-light': 'url("./assets/images/bg-mobile-light.jpg")'
       }
     },
   },
