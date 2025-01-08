@@ -7,6 +7,9 @@ function App() {
       <div className="w-full h-[320px] absolute top-0 left-0 bg-hero-pattern-mobile-light sm:bg-hero-pattern-desktop-light bg-cover bg-no-repeat -z-10"></div>
       <Header />
       <TasksListContainer />
+      <footer className="w-full text-center mt-8">
+        <span className="font-primaryRegular text-light-dark-grayish-blue text-sm">Drag and drop to reorder list</span>
+      </footer>
     </main>
   )
 }
