@@ -15,10 +15,10 @@ export const TaskItem = ({ task }: TaskItemProps) => {
   }
 
   return (
-    <li className="py-4 px-4 text-left w-full text-light-very-dark-grayish-blue flex items-center justify-between cursor-pointer border-b-2">
+    <li className="py-4 px-4 text-left w-full text-light-very-dark-grayish-blue flex items-center justify-between cursor-pointer border-b-2 dark:border-b-dark-very-dark-grayish-blue-2">
       <div className="flex items-center space-x-8">
-        <input onClick={handleToggleCompleted} type="checkbox" checked={task.completed} />
-        <span className={`${task.completed === false ? null : 'line-through text-light-light-grayish-blue'}`}>{task.name}</span>
+        <input onChange={handleToggleCompleted} type="checkbox" checked={task.completed} />
+        <span className={`dark:text-dark-light-grayish-blue ${task.completed === false ? null : 'line-through text-light-light-grayish-blue'}`}>{task.name}</span>
       </div>
       <button onClick={handleDeleteTask}>
         <Close />

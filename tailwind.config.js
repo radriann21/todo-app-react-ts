@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -33,7 +34,9 @@ export default {
       },
       backgroundImage: {
         'hero-pattern-desktop-light': 'url("./assets/images/bg-desktop-light.jpg")',
-        'hero-pattern-mobile-light': 'url("./assets/images/bg-mobile-light.jpg")'
+        'hero-pattern-mobile-light': 'url("./assets/images/bg-mobile-light.jpg")',
+        'hero-pattern-desktop-dark': 'url("./assets/images/bg-desktop-dark.jpg")',
+        'hero-pattern-mobile-dark': 'url("./assets/images/bg-mobile-dark.jpg")'
       }
     },
   },

@@ -28,7 +28,7 @@ export const TodoInput = () => {
   return (
     <section className="w-full">
       <form onSubmit={handleSubmit} className="w-full">
-        <input onChange={handleInput} className="py-4 px-4 bg-white rounded-md mt-10 w-full outline-none border-none" type="text" placeholder="Create a new todo..." />
+        <input onChange={handleInput} className="py-4 px-4 bg-white dark:bg-dark-very-dark-desaturated-blue rounded-md mt-10 w-full outline-none border-none" type="text" placeholder="Create a new todo..." />
       </form>
     </section>
   )
